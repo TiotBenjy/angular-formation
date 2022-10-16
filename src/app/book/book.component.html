@@ -1,0 +1,12 @@
+<li class="books__item">
+    <img [src]="book.image" [alt]="book.name" width="100" class="books__item-image">
+    <p class="books__item-name">
+        {{book.name | uppercase}} by {{book.author | titlecase}}
+    </p>
+    <p class="books__item-price">
+        {{book.amount | currency:'EUR':true}}
+    </p>
+    <button (click)="addToCard()">
+        Add to cart
+    </button>
+</li>

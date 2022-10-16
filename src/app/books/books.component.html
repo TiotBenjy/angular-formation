@@ -1,1 +1,8 @@
-<p>books works!</p>
+<h2>Programming book list</h2>
+
+<ul class="books__container">
+    <ng-container *ngFor="let singleBook of books">
+        <app-book (emitBook)="addToCard($event)" [book]="singleBook"></app-book>
+    </ng-container>
+
+</ul>
